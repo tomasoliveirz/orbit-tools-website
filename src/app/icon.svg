@@ -1,0 +1,21 @@
+<svg width="512" height="512" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <radialGradient id="coreGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(512 512) rotate(90) scale(260)">
+            <stop offset="0%" stop-color="#a855f7" stop-opacity="0.8" />
+            <stop offset="70%" stop-color="#6b21a8" stop-opacity="0.2" />
+            <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+        </radialGradient>
+        <linearGradient id="coreActive" x1="512" y1="352" x2="512" y2="672" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#d8b4fe" />
+            <stop offset="100%" stop-color="#7e22ce" />
+        </linearGradient>
+    </defs>
+    
+    <circle cx="512" cy="512" r="260" fill="url(#coreGlow)" opacity="0.6" />
+    <circle cx="512" cy="512" r="160" fill="#232326" />
+    
+    <g transform="rotate(45 512 512)">
+        <path d="M 271 708 A 310 310 0 0 1 708 271" fill="none" stroke="#a855f7" stroke-width="24" stroke-linecap="round" />
+        <path d="M 753 316 A 310 310 0 0 1 316 753" fill="none" stroke="#a855f7" stroke-width="24" stroke-linecap="round" />
+    </g>
+</svg>

@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0B0B0E;
+  --fg: #F2F2F4;
+  --muted: rgba(242, 242, 244, 0.65);
+  --panel: rgba(255, 255, 255, 0.04);
+  --border: rgba(255, 255, 255, 0.08);
+  --accentA: #7C3AED;
+  /* purple */
+  --accentB: #EC4899;
+  /* pink */
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+@theme {
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-panel: var(--panel);
+  --color-border: var(--border);
+  --color-accentA: var(--accentA);
+  --color-accentB: var(--accentB);
+
+  --shadow-glow: var(--shadow);
+}
+
+/* Typography Scale */
+.text-xs {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.text-sm {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.text-base {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Increased base size and line-height */
+.text-lg {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Adjusted lg */
+.text-xl {
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+.text-2xl {
+  font-size: 32px;
+  line-height: 1.3;
+}
+
+.text-3xl {
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+/* Glassmorphism Utility */
+/* Glassmorphism Utility */
+.glass-panel {
+  background: rgba(11, 11, 14, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+}
+
+/* Override bold to be lighter/normal */
+.font-bold {
+  font-weight: 400 !important;
+}
+
+.font-semibold {
+  font-weight: 300 !important;
+}
+
+.font-medium {
+  font-weight: 300 !important;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  /* Default to Light */
+  line-height: 1.6;
+  /* Global line-height increase */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Logo Animations */
+@media (prefers-reduced-motion: no-preference) {
+  .logo-svg.spinning #orbits {
+    animation: orbitSpin 14s linear infinite;
+    transform-origin: 512px 512px;
+  }
+
+  .drifting {
+    animation: coreDrift 3.2s ease-in-out infinite;
+    transform-origin: 512px 512px;
+  }
+}
+
+@keyframes orbitSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes coreDrift {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(6px);
+  }
+}
+
+/* Page Transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 400ms ease-in-out, transform 400ms ease-in-out;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
