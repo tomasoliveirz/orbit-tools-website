@@ -17,7 +17,7 @@ export const tools: Tool[] = [
         tagline: "Identify accounts that don’t follow you back — clearly and at your pace.",
         tags: ["Social", "Privacy-first"],
         featured: true,
-        chromeWebStoreUrl: "#", // Placeholder as per prompt "..."
+        chromeWebStoreUrl: "https://chromewebstore.google.com/detail/orbit-social-circle-visua/moclhlflhkomlechhdbcjedjlpocgppg?authuser=8&hl=en",
         supportEmail: "contact.orbit.app@gmail.com",
         disclaimer: "Not affiliated with Instagram or Meta.",
         status: "Active",
